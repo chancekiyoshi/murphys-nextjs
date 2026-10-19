@@ -1,21 +1,24 @@
-import { Col, Container, Image, Row } from 'react-bootstrap';
+"use client";
 
-/** The Home page. */
-const Home = () => (
-  <main>
-    <Container id="landing-page" fluid className="py-3">
-      <Row className="align-middle text-center">
-        <Col xs={4}>
-          <Image src="next.svg" width="150px" alt="" />
-        </Col>
+import { Container, Image, Navbar, Nav, Row, Col } from 'react-bootstrap';
+import { Instagram, Facebook, Twitter } from 'react-bootstrap-icons';
 
-        <Col xs={8} className="d-flex flex-column justify-content-center">
-          <h1>Welcome to this template</h1>
-          <p>Now get to work and modify this app!</p>
-        </Col>
-      </Row>
-    </Container>
-  </main>
-);
+const CenterText = () => {
+  return (
+    <Row id="centerText" className="align-items-center justify-content-center">
+      <Col xs={8} className="text-center style2">
+        <h2>Now accepting reservations for St Patrick's Day</h2>
+        <h2>Please call 808-531-0422 for reservations</h2>
+        <h2>St Patrick's Day To-Go Orders can be ordered on our website menu.</h2>
+      </Col>
+    </Row>
+  );
+};
 
-export default Home;
+export default function Home() {
+  return (
+    <main>
+      <CenterText />
+    </main>
+  );
+}
